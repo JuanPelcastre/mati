@@ -15,7 +15,7 @@
 	            <meta name="format-detection" content="telephone=no">
 	            <meta name="msapplication-tap-highlight" content="no">
 	            <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-	            <link rel="stylesheet" type="text/css" href="css/index.css">
+	            <link rel="stylesheet" type="text/css" href="css/index.css-">
 	            <title>Hello World</title>
 
 	            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -36,7 +36,7 @@
 	        			position: relative;
 	        			/* width: 342px; */
 	        			width: 481px;
-	        			/* height: 570px; */
+	        			height: 100vh;
 	        			height: auto;
 	        			margin-right: auto;
 	        			margin-left: auto;
@@ -86,7 +86,7 @@
 	        			margin-left: auto;
 	        			position: relative; */
 	        		}
-	        		
+
 							.form-control:focus {
 							    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0);
 							}
@@ -94,21 +94,21 @@
 							    padding: 0 .75rem;
 							}
 
-							input[type="text"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+							/* input[type="text"]::-webkit-input-placeholder {
 							  color: pink;
 							}
-							input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+							input[type="text"]::-moz-placeholder {
 							  color: pink;
 							}
-							input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+							input[type="text"]:-ms-input-placeholder {
 							  color: pink;
 							}
-							input[type="text"]:-moz-placeholder { /* Firefox 18- */
+							input[type="text"]:-moz-placeholder {
 							  color: pink;
 							}
 							#card-numberEx::placeholder {
 							  color: salmon;
-							}
+							} */
 							.alert {
 							    /* position: relative;
 							    padding: .75rem 1.25rem;
@@ -158,23 +158,32 @@
 									<label class="pl-3">Tarjeta</label>
 									<div class="" style="background-color: #e2e3e5;">
 
-		        				<div class="row no-gutters d-flex align-items-end" style="color: {{fcolor}}">
-		        					<div class="col-6">
+		        				<div class="row no-gutters d-flex align-items-center" style="color: {{fcolor}}">
+											<div class="col-1">
+		        						<div class="form-group mb-0">
+													<div class="col-1 d-flex align-items-center">
+														<img src="images/credit-card.svg" class="icon-color" height="16px" alt="">
+				        					</div>
+
+		        						</div>
+		        					</div>
+											<div class="col-5">
 		        						<div class="form-group mb-0">
 
 		        							<input type="text" class="form-control" id="card-number" card-number data-ng-model="card.number" name="CardNumber"
-													style="border-color: transparent;background-color:transparent; color:{{fcolor}};">
+													style="border-color: transparent;background-color:transparent; color:{{fcolor}};"
+													placeholder="XXXX XXXX XXXX XXXX">
 		        						</div>
 		        					</div>
 											<div class="col-3">
 			        					<div class="form-group mb-0">
-			        						<input type="text" class="form-control" id="card-numberEx" placeholder="XX/XX"
+			        						<input type="text" class="form-control text-center" id="card-numberEx" placeholder="XX/XX"
 			        						style="border-color: transparent; background-color:transparent;color:{{fcolor}};">
 			        					</div>
 			        				</div>
 											<div class="col-3">
 												<div class="form-group mb-0">
-			        						<input type="text" class="form-control" id="card-numberCVV" value="XX/XX"
+			        						<input type="text" class="form-control text-right" id="card-numberCVV" placeholder="XXX"
 			        						style="border-color: transparent; background-color:transparent;color:{{fcolor}};">
 			        					</div>
 											</div>
@@ -225,15 +234,29 @@
 	        </div>
 
 	        <div class="px-3 text-center">
-	        	<a href="javascript:;" type="button" class="btn btn-primary py-3 px-4">
-	        		Agregar tarjeta de crédito
-	        	</a>
+	        	<a href="javascript:;" type="button" class="btn btn-primary py-2 px-4">
+							<div class="d-flex align-items-center">
+
+
+							<img src="images/plus-white.svg" width="25"alt="">
+							 &nbsp; Tarjeta de crédito
+						 	</div>
+						</a>
+	        </div>
+
+					<div class="">
+	        	<a href="javascript:;" class="btn-block text-center text-primary" style="background-color:#ced4da;">
+							<div class="d-flex align-items-center justify-content-center">
+							<img src="images/plus.svg" width="20"alt="">
+							  Tarjeta de crédito
+						 	</div>
+						</a>
 	        </div>
 
 	    </div>
 
 
-			<div class="col-2 d-flex justify-content-start align-items-end d-none"
+			<!-- <div class="col-2 d-flex justify-content-start align-items-end d-none"
 				   style="padding-left: 0;padding-bottom:1rem;">
 			    <a href="javascript:;">
 			        <img src="images/camara.svg" alt="" class="w-100">
@@ -244,7 +267,7 @@
 			    <a href="javascript:;">
 					    <img src="images/pen.svg" alt="" class="w-100">
 					</a>
-		  </div>
+		  </div> -->
 
 	    <script src="js/libs/jquery/jquery/dist/jquery.js"></script>
 	    <script src="js/libs/angular/angular/angular.js"></script>
